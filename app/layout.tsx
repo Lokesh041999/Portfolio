@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import ScrollBarHandler from "@/components/ScrollBarHandler";
 import "./globals.css";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const nodeEnvironment = process.env.NEXT_PUBLIC_NODE_ENVIRONMENT;
 const isProduction = nodeEnvironment === "production";
@@ -49,6 +50,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
+        <GoogleAnalytics />
         <ScrollBarHandler />
         {children}
       </body>
