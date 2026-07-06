@@ -61,7 +61,7 @@ export default function TechStack() {
                       <a
                         href={certificate.href}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="inline-flex rounded-lg border border-cyan-400/40 px-3 py-1 text-xs font-bold text-cyan-300 transition hover:bg-cyan-400 hover:text-black"
                       >
                         View Certificate

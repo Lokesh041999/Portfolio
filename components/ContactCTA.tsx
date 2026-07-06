@@ -53,7 +53,7 @@ export default function ContactCTA() {
           <a
             href={locationMapUrl}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-cyan-400/50 hover:bg-cyan-400/10"
           >
             <FaLocationDot className="text-cyan-300" size={24} />

@@ -101,8 +101,8 @@ export default function Navbar({
           title="Go to Home"
           aria-label="Go to Home"
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl text-cyan-300">
-            <FaCode size={30} />
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-400/40 bg-cyan-400/10 text-sm font-black text-cyan-300">
+            LA
           </span>
 
           <span className="text-2xl font-bold tracking-tight">
@@ -176,10 +176,11 @@ export default function Navbar({
 
           <a
             href={resumePath}
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className="theme-icon-button inline-flex h-11 w-11 items-center justify-center rounded-lg border transition sm:w-auto sm:px-4"
-            title="Download Resume"
-            aria-label="Download Resume"
+            title="View Resume"
+            aria-label="View Resume"
           >
             <FaDownload size={15} />
             <span className="ml-2 hidden text-sm font-semibold sm:inline">
@@ -191,10 +192,11 @@ export default function Navbar({
         <div className="flex items-center gap-3 lg:hidden">
           <a
             href={resumePath}
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className="theme-icon-button inline-flex h-11 w-11 items-center justify-center rounded-lg border transition sm:w-auto sm:px-4"
-            title="Download Resume"
-            aria-label="Download Resume"
+            title="View Resume"
+            aria-label="View Resume"
           >
             <FaDownload size={15} />
             <span className="ml-2 hidden text-sm font-semibold sm:inline">
