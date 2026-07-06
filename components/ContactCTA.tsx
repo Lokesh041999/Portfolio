@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { IoCall, IoMail } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
 
-import { personalInfo } from "@/lib/data";
+import { locationMapUrl, personalInfo } from "@/lib/data";
 
 export default function ContactCTA() {
   return (
@@ -50,12 +50,18 @@ export default function ContactCTA() {
             <span className="text-lg text-slate-300">{personalInfo.phone}</span>
           </a>
 
-          <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+          <a
+            href={locationMapUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-cyan-400/50 hover:bg-cyan-400/10"
+          >
             <FaLocationDot className="text-cyan-300" size={24} />
+
             <span className="text-lg text-slate-300">
               {personalInfo.location}
             </span>
-          </div>
+          </a>
 
           <a
             href={`https://${personalInfo.linkedin}`}

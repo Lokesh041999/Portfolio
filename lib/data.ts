@@ -41,7 +41,12 @@ export const isProduction = nodeEnvironment === "production";
 
 export const basePath = isProduction ? "/Portfolio" : "";
 
-export const resumePath = `${basePath}/resume/Lokesh_Agarwal_Resume.pdf`;
+export const withBasePath = (path: string) => `${basePath}${path}`;
+
+export const resumePath = withBasePath("/resume/Lokesh_Agarwal_Resume.pdf");
+
+export const locationMapUrl =
+  "https://www.google.com/maps/search/?api=1&query=Surat%2C%20Gujarat%2C%20India";
 
 export const personalInfo = {
   name: "Lokesh Agarwal",
@@ -278,19 +283,19 @@ export const certificates = [
     title: "Frontend Developer React.js",
     platform: "HackerRank",
     year: "2026",
-    href: `${basePath}/certificates/frontend-react-hackerrank.pdf`,
+    href: withBasePath("/certificates/frontend-react-hackerrank.pdf"),
   },
   {
     title: "Advanced SQL",
     platform: "LinkedIn Learning",
     year: "2023",
-    href: `${basePath}/certificates/advanced-sql-linkedin.pdf`,
+    href: withBasePath("/certificates/advanced-sql-linkedin.pdf"),
   },
   {
     title: "Hackathon: Solving Real Life Challenges using Java",
     platform: "VIT Vellore",
     year: "2022",
-    href: `${basePath}/certificates/vit-hackathon-java.pdf`,
+    href: withBasePath("/certificates/vit-hackathon-java.pdf"),
   },
 ];
 
@@ -311,6 +316,7 @@ export const contactItems: {
   },
   {
     label: personalInfo.location,
+    href: locationMapUrl,
     icon: FaLocationDot,
   },
   {
