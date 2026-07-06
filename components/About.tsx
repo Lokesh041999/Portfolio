@@ -1,6 +1,6 @@
-import { FaDownload, FaGraduationCap } from "react-icons/fa6";
+import { FaGraduationCap } from "react-icons/fa6";
 
-import { education, personalInfo } from "@/lib/data";
+import { education } from "@/lib/data";
 
 export default function About() {
   return (
@@ -12,23 +12,27 @@ export default function About() {
 
       <div className="w-full">
         <p className="text-xl leading-9 text-slate-300">
-          {personalInfo.summary}
+          I am a software engineer interested in both frontend and backend
+          development, with a strong focus on building complete, scalable, and
+          production-ready web applications.
         </p>
 
         <p className="mt-5 text-lg leading-8 text-slate-300">
-          I specialize in building production-ready dashboards, geospatial
-          tools, reusable UI systems, authentication flows, real-time
-          application features, and scalable frontend architecture.
+          On the frontend, I enjoy creating clean user interfaces, reusable
+          components, responsive layouts, dashboards, geospatial map tools, and
+          smooth user experiences using React.js, Next.js, TypeScript, and
+          modern UI tooling.
         </p>
 
         <p className="mt-5 text-lg leading-8 text-slate-300">
-          My work focuses on clean UI architecture, performance optimization,
-          API integrations, real-time features, and map-based product
-          experiences using React.js, Next.js, Node.js, and Mapbox GL JS.
+          On the backend, I work with Node.js, Express.js, API integrations,
+          authentication flows, automation, real-time features, database-driven
+          workflows, and server-side logic that supports reliable product
+          functionality.
         </p>
       </div>
 
-      <div className="mt-6">
+      <div className="mt-14">
         <div className="mb-6">
           <h2 className="text-3xl font-black tracking-tight">Education</h2>
           <div className="mt-3 h-1 w-16 rounded-full bg-cyan-400" />

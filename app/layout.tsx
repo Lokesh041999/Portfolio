@@ -1,10 +1,21 @@
 import type { Metadata } from "next";
+
+import ScrollBarHandler from "@/components/ScrollBarHandler";
 import "./globals.css";
+
+const nodeEnvironment = process.env.NEXT_PUBLIC_NODE_ENVIRONMENT;
+const isProduction = nodeEnvironment === "production";
+const basePath = isProduction ? "/Portfolio" : "";
 
 export const metadata: Metadata = {
   title: "Lokesh Agarwal",
   description:
     "Portfolio of Lokesh Agarwal, Software Engineer II specializing in React.js, Next.js, Node.js, Mapbox GL JS, dashboards, and geospatial applications.",
+  icons: {
+    icon: `${basePath}/icons/variant6-blue.svg`,
+    shortcut: `${basePath}/icons/variant6-blue.svg`,
+    apple: `${basePath}/icons/variant6-blue-180.png`,
+  },
 };
 
 const themeScript = `
@@ -37,7 +48,10 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <ScrollBarHandler />
+        {children}
+      </body>
     </html>
   );
 }

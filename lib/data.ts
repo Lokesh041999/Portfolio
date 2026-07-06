@@ -1,11 +1,14 @@
 import type { IconType } from "react-icons";
+import { BsDiagram3Fill } from "react-icons/bs";
 import {
   FaCode,
   FaDatabase,
   FaGithub,
+  FaJava,
   FaLinkedin,
   FaNodeJs,
   FaReact,
+  FaServer,
   FaShieldAlt,
 } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
@@ -13,15 +16,24 @@ import { IoCall, IoMail } from "react-icons/io5";
 import { MdSpeed } from "react-icons/md";
 import { RiCpuFill } from "react-icons/ri";
 import {
+  SiChartdotjs,
+  SiCplusplus,
+  SiCss,
+  SiEjs,
   SiExpress,
+  SiHtml5,
   SiJavascript,
   SiMapbox,
+  SiMui,
   SiMysql,
   SiNextdotjs,
+  SiPython,
   SiRedux,
+  SiSocketdotio,
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
+import { TbChartHistogram } from "react-icons/tb";
 
 export const nodeEnvironment = process.env.NEXT_PUBLIC_NODE_ENVIRONMENT;
 
@@ -29,7 +41,7 @@ export const isProduction = nodeEnvironment === "production";
 
 export const basePath = isProduction ? "/Portfolio" : "";
 
-export const resumePath = `${basePath}/Lokesh_Agarwal_Resume.pdf`;
+export const resumePath = `${basePath}/resume/Lokesh_Agarwal_Resume.pdf`;
 
 export const personalInfo = {
   name: "Lokesh Agarwal",
@@ -40,7 +52,7 @@ export const personalInfo = {
   linkedin: "linkedin.com/in/lokesh04",
   github: "github.com/Lokesh041999",
   summary:
-    "Software Engineer II with 2.5+ years of experience building scalable web applications, real-time dashboards, geospatial visualizations, SSO authentication, and backend automation.",
+    "Software Engineer II with 3+ years of experience building scalable web applications, real-time dashboards, geospatial visualizations, API integrations, authentication flows, and backend automation.",
 };
 
 export const navLinks = [
@@ -56,7 +68,7 @@ export const heroSkills = [
   "React.js",
   "Next.js",
   "Node.js",
-  "TypeScript",
+  "JavaScript",
   "Mapbox GL JS",
 ];
 
@@ -67,7 +79,7 @@ export const stats: {
 }[] = [
   {
     label: "Years Experience",
-    value: "2.5+",
+    value: "3+",
     icon: FaCode,
   },
   {
@@ -91,26 +103,32 @@ export const experiences = [
   {
     role: "Software Engineer II",
     company: "MapZot.AI",
-    location: "United States · Remote",
+    location: "Remote",
     duration: "Apr 2025 – Present",
     points: [
-      "Implemented SSO authentication and WebSocket-based notification architecture for enterprise identity management and real-time updates.",
-      "Developed backend automation using Node.js and Puppeteer for scheduled data processing and business logic automation.",
-      "Integrated POS systems and Facebook Ads Audience API for real-time transaction sync and campaign segmentation.",
-      "Optimized geospatial visualization via Mapbox GL JS with code splitting and memoization, improving speed by 40%.",
-      "Led Agile sprints as team captain — task assignment, code reviews, and mentoring junior developers.",
+      "Developing full-stack features across React.js, Next.js, EJS, Node.js, Redux.js, and REST APIs for scalable web applications.",
+      "Designed a reusable API service architecture supporting GET, POST, PUT, PATCH, and DELETE methods from a single API class, enabling consistent integration across GIS Layer and Nearby Business filter workflows.",
+      "Building responsive dashboards, reusable UI components, forms, filters, dialogs, data tables, charts, and report screens using React.js, Next.js, Material UI v5, Chart.js, and Recharts.",
+      "Integrating APIs for authentication, role-based permissions, search, reports, notifications, user management, and business workflows.",
+      "Working on Mapbox GL JS based geospatial features including custom layers, markers, popups, traffic data, parcel data, and location intelligence tools.",
+      "Optimizing frontend performance using memoization, lazy loading, code splitting, debounced search, pagination, and efficient rendering for large datasets.",
+      "Managing code using Git and GitHub workflows including feature branches, pull requests, code reviews, merge conflict resolution, and production deployments.",
+      "Handling production bug fixes, responsive design issues, browser compatibility problems, and UI/UX improvements across the dashboard.",
     ],
   },
   {
     role: "Software Engineer",
     company: "MapZot.AI",
-    location: "United States · Remote",
+    location: "Remote",
     duration: "Oct 2023 – Mar 2025",
     points: [
-      "Built scalable admin panel and dashboard features using React.js, Next.js, Redux, and Node.js.",
-      "Integrated geospatial tilesets including Wetland, Flood, Zoning, Parcel, and Traffic layers via Mapbox GL JS.",
-      "Led UI/UX redesign with custom dark theme, reducing user errors by 25% and dev effort by 30% via reusable components.",
-      "Built site recommendation tools using demographic analysis, improving accuracy by 10% and API efficiency by 20%.",
+      "Developed scalable frontend features using React.js, Next.js, JavaScript, Redux.js, Material UI v5, and REST API integrations.",
+      "Built dashboard modules, admin panel screens, search flows, filters, forms, modals, tables, charts, and report-based UI features.",
+      "Implemented Mapbox GL JS features including map layers, markers, popups, parcel data, traffic data, nearby businesses, and planned development layers.",
+      "Created reusable UI components and common frontend patterns to reduce repeated code and improve development speed.",
+      "Improved user experience by fixing responsive layout issues, UI bugs, validation flows, toast messages, loaders, and empty states.",
+      "Worked with Git and GitHub for version control, branch management, pull requests, code reviews, and production release support.",
+      "Collaborated with backend, product, and QA teams to debug API issues, test features, and deliver stable production updates.",
     ],
   },
 ];
@@ -143,12 +161,32 @@ export const techStack: {
     icon: SiNextdotjs,
   },
   {
+    label: "JavaScript",
+    icon: SiJavascript,
+  },
+  {
     label: "TypeScript",
     icon: SiTypescript,
   },
   {
-    label: "JavaScript",
-    icon: SiJavascript,
+    label: "Redux.js",
+    icon: SiRedux,
+  },
+  {
+    label: "HTML",
+    icon: SiHtml5,
+  },
+  {
+    label: "CSS",
+    icon: SiCss,
+  },
+  {
+    label: "Tailwind CSS",
+    icon: SiTailwindcss,
+  },
+  {
+    label: "Material UI",
+    icon: SiMui,
   },
   {
     label: "Node.js",
@@ -159,28 +197,60 @@ export const techStack: {
     icon: SiExpress,
   },
   {
-    label: "Mapbox GL JS",
-    icon: SiMapbox,
+    label: "EJS",
+    icon: SiEjs,
   },
   {
-    label: "Redux",
-    icon: SiRedux,
-  },
-  {
-    label: "Tailwind CSS",
-    icon: SiTailwindcss,
+    label: "Socket.io",
+    icon: SiSocketdotio,
   },
   {
     label: "MySQL",
     icon: SiMysql,
   },
   {
-    label: "GitHub",
-    icon: FaGithub,
+    label: "Mapbox GL JS",
+    icon: SiMapbox,
   },
   {
-    label: "Database",
+    label: "Chart.js",
+    icon: SiChartdotjs,
+  },
+  {
+    label: "Recharts",
+    icon: TbChartHistogram,
+  },
+  {
+    label: "Java",
+    icon: FaJava,
+  },
+  {
+    label: "JSP",
+    icon: FaCode,
+  },
+  {
+    label: "Servlet",
+    icon: FaServer,
+  },
+  {
+    label: "JDBC",
     icon: FaDatabase,
+  },
+  {
+    label: "Python",
+    icon: SiPython,
+  },
+  {
+    label: "C/C++",
+    icon: SiCplusplus,
+  },
+  {
+    label: "Data Structures",
+    icon: BsDiagram3Fill,
+  },
+  {
+    label: "GitHub",
+    icon: FaGithub,
   },
 ];
 
@@ -208,16 +278,19 @@ export const certificates = [
     title: "Frontend Developer React.js",
     platform: "HackerRank",
     year: "2026",
+    href: `${basePath}/certificates/frontend-react-hackerrank.pdf`,
   },
   {
     title: "Advanced SQL",
     platform: "LinkedIn Learning",
     year: "2023",
+    href: `${basePath}/certificates/advanced-sql-linkedin.pdf`,
   },
   {
     title: "Hackathon: Solving Real Life Challenges using Java",
     platform: "VIT Vellore",
     year: "2022",
+    href: `${basePath}/certificates/vit-hackathon-java.pdf`,
   },
 ];
 

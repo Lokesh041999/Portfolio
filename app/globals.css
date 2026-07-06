@@ -28,8 +28,40 @@ html[data-theme="light"] {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+html.show-scrollbar,
+html.show-scrollbar body {
+  scrollbar-width: thin;
+  scrollbar-color: #22d3ee transparent;
+}
+
+html.show-scrollbar::-webkit-scrollbar,
+html.show-scrollbar body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html.show-scrollbar::-webkit-scrollbar-track,
+html.show-scrollbar body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html.show-scrollbar::-webkit-scrollbar-thumb,
+html.show-scrollbar body::-webkit-scrollbar-thumb {
+  background: #22d3ee;
+  border-radius: 999px;
 }
 
 body {
@@ -45,19 +77,6 @@ body {
 button,
 a {
   cursor: pointer;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--background);
-}
-
-::-webkit-scrollbar-thumb {
-  background: #1ddfd2;
-  border-radius: 999px;
 }
 
 .theme-page {
@@ -217,6 +236,7 @@ html[data-theme="light"] .text-cyan-300 {
 }
 
 html[data-theme="light"] .border-cyan-400\/30,
+html[data-theme="light"] .border-cyan-400\/40,
 html[data-theme="light"] .border-cyan-400\/50,
 html[data-theme="light"] .border-cyan-400\/60 {
   border-color: rgba(8, 145, 178, 0.45);
@@ -228,6 +248,14 @@ html[data-theme="light"] .hover\:bg-cyan-400\/10:hover {
 
 html[data-theme="light"] .hover\:border-cyan-400\/50:hover {
   border-color: rgba(8, 145, 178, 0.55);
+}
+
+html[data-theme="light"] .hover\:bg-cyan-400:hover {
+  background-color: #22d3ee;
+}
+
+html[data-theme="light"] .hover\:text-black:hover {
+  color: #000000;
 }
 
 /* Hero/skills chip readability in light mode */

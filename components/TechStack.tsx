@@ -11,17 +11,17 @@ export default function TechStack() {
       </div>
 
       <div>
-        <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
           {techStack.map((skill) => {
             const Icon = skill.icon;
 
             return (
               <div
                 key={skill.label}
-                className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-5 text-lg font-semibold text-slate-200 transition hover:border-cyan-400/50 hover:bg-cyan-400/10"
+                className="flex min-h-[88px] items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-4 text-base font-semibold text-slate-200 transition hover:border-cyan-400/50 hover:bg-cyan-400/10"
               >
                 <Icon size={24} className="shrink-0 text-cyan-300" />
-                <span>{skill.label}</span>
+                <span className="leading-tight">{skill.label}</span>
               </div>
             );
           })}
@@ -52,9 +52,22 @@ export default function TechStack() {
                     {certificate.platform}
                   </p>
 
-                  <span className="mt-3 inline-flex rounded-lg bg-cyan-400/10 px-3 py-1 text-xs font-bold text-cyan-300">
-                    {certificate.year}
-                  </span>
+                  <div className="mt-4 flex flex-wrap items-center gap-3">
+                    <span className="inline-flex rounded-lg bg-cyan-400/10 px-3 py-1 text-xs font-bold text-cyan-300">
+                      {certificate.year}
+                    </span>
+
+                    {certificate.href ? (
+                      <a
+                        href={certificate.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex rounded-lg border border-cyan-400/40 px-3 py-1 text-xs font-bold text-cyan-300 transition hover:bg-cyan-400 hover:text-black"
+                      >
+                        View Certificate
+                      </a>
+                    ) : null}
+                  </div>
                 </div>
               </div>
             </div>
