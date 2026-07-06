@@ -27,7 +27,7 @@ export const nodeEnvironment = process.env.NEXT_PUBLIC_NODE_ENVIRONMENT;
 
 export const isProduction = nodeEnvironment === "production";
 
-export const basePath = isProduction ? "/portfolio" : "";
+export const basePath = isProduction ? "/Portfolio" : "";
 
 export const resumePath = `${basePath}/Lokesh_Agarwal_Resume.pdf`;
 
