@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Lokesh Agarwal | Software Engineer II",
+  title: "Lokesh Agarwal",
   description:
     "Portfolio of Lokesh Agarwal, Software Engineer II specializing in React.js, Next.js, Node.js, Mapbox GL JS, dashboards, and geospatial applications.",
 };

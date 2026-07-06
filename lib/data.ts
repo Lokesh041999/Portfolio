@@ -23,6 +23,14 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
+export const nodeEnvironment = process.env.NEXT_PUBLIC_NODE_ENVIRONMENT;
+
+export const isProduction = nodeEnvironment === "production";
+
+export const basePath = isProduction ? "/portfolio" : "";
+
+export const resumePath = `${basePath}/Lokesh_Agarwal_Resume.pdf`;
+
 export const personalInfo = {
   name: "Lokesh Agarwal",
   role: "Software Engineer II",
@@ -42,43 +50,6 @@ export const navLinks = [
   "Projects",
   "Skills",
   "Contact",
-];
-
-export const education = [
-  {
-    degree: "Master of Computer Applications",
-    shortDegree: "MCA",
-    institute: "Vellore Institute of Technology",
-    location: "Vellore, India",
-    year: "2023",
-    cgpa: "7.3 / 10.0",
-  },
-  {
-    degree: "Bachelor of Computer Applications",
-    shortDegree: "BCA",
-    institute: "Arka Jain University",
-    location: "Jamshedpur, India",
-    year: "2021",
-    cgpa: "8.83 / 10.0",
-  },
-];
-
-export const certificates = [
-  {
-    title: "Frontend Developer React.js",
-    platform: "HackerRank",
-    year: "2026",
-  },
-  {
-    title: "Advanced SQL",
-    platform: "LinkedIn Learning",
-    year: "2023",
-  },
-  {
-    title: "Hackathon: Solving Real Life Challenges using Java",
-    platform: "VIT Vellore",
-    year: "2022",
-  },
 ];
 
 export const heroSkills = [
@@ -123,9 +94,9 @@ export const experiences = [
     location: "United States · Remote",
     duration: "Apr 2025 – Present",
     points: [
-      "Implemented SSO authentication and WebSocket-based notification architecture.",
-      "Developed backend automation using Node.js and Puppeteer.",
-      "Integrated POS systems and Facebook Ads Audience API.",
+      "Implemented SSO authentication and WebSocket-based notification architecture for enterprise identity management and real-time updates.",
+      "Developed backend automation using Node.js and Puppeteer for scheduled data processing and business logic automation.",
+      "Integrated POS systems and Facebook Ads Audience API for real-time transaction sync and campaign segmentation.",
       "Optimized geospatial visualization via Mapbox GL JS with code splitting and memoization, improving speed by 40%.",
       "Led Agile sprints as team captain — task assignment, code reviews, and mentoring junior developers.",
     ],
@@ -138,7 +109,7 @@ export const experiences = [
     points: [
       "Built scalable admin panel and dashboard features using React.js, Next.js, Redux, and Node.js.",
       "Integrated geospatial tilesets including Wetland, Flood, Zoning, Parcel, and Traffic layers via Mapbox GL JS.",
-      "Led UI/UX redesign with custom dark theme, reducing user errors by 25% and dev effort by 30%.",
+      "Led UI/UX redesign with custom dark theme, reducing user errors by 25% and dev effort by 30% via reusable components.",
       "Built site recommendation tools using demographic analysis, improving accuracy by 10% and API efficiency by 20%.",
     ],
   },
@@ -148,14 +119,14 @@ export const projects = [
   {
     title: "Real-Time ChatApp",
     description:
-      "Engineered a chat app using Node.js, Express.js, React.js, and Socket.io supporting 100+ simultaneous users with room-based chat.",
-    tags: ["Node.js", "Socket.io", "React.js"],
+      "Engineered a chat app using Node.js, Express.js, React.js, and Socket.io supporting 100+ simultaneous users with room-based chat and unique room IDs.",
+    tags: ["Node.js", "Express.js", "Socket.io", "React.js"],
   },
   {
     title: "E-Commerce Shopping Cart",
     description:
-      "Built a full e-commerce platform using Java, JSP, Servlet, JDBC, and MySQL with secure authentication and admin dashboard.",
-    tags: ["Java", "JSP", "MySQL"],
+      "Built a full e-commerce platform using Java, JSP, Servlet, JDBC, and MySQL with secure authentication, product listings, and admin inventory management.",
+    tags: ["Java", "JSP", "Servlet", "JDBC", "MySQL"],
   },
 ];
 
@@ -210,6 +181,43 @@ export const techStack: {
   {
     label: "Database",
     icon: FaDatabase,
+  },
+];
+
+export const education = [
+  {
+    degree: "Master of Computer Applications",
+    shortDegree: "MCA",
+    institute: "Vellore Institute of Technology",
+    location: "Vellore, India",
+    year: "2023",
+    cgpa: "7.3 / 10.0",
+  },
+  {
+    degree: "Bachelor of Computer Applications",
+    shortDegree: "BCA",
+    institute: "Arka Jain University",
+    location: "Jamshedpur, India",
+    year: "2021",
+    cgpa: "8.83 / 10.0",
+  },
+];
+
+export const certificates = [
+  {
+    title: "Frontend Developer React.js",
+    platform: "HackerRank",
+    year: "2026",
+  },
+  {
+    title: "Advanced SQL",
+    platform: "LinkedIn Learning",
+    year: "2023",
+  },
+  {
+    title: "Hackathon: Solving Real Life Challenges using Java",
+    platform: "VIT Vellore",
+    year: "2022",
   },
 ];
 

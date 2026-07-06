@@ -1,11 +1,14 @@
 import type { NextConfig } from "next";
 
-const repoName = "portfolio";
+const nodeEnvironment = process.env.NEXT_PUBLIC_NODE_ENVIRONMENT;
+const isProduction = nodeEnvironment === "production";
+
+const basePath = isProduction ? "/portfolio" : "";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: `/${repoName}`,
-  assetPrefix: `/${repoName}/`,
+  basePath,
+  assetPrefix: basePath ? `${basePath}/` : "",
   images: {
     unoptimized: true,
   },

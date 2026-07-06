@@ -6,7 +6,7 @@ import { IoClose, IoMenu } from "react-icons/io5";
 import { MdDarkMode, MdLightMode, MdMonitor } from "react-icons/md";
 
 import type { ActiveSection, ThemeMode } from "@/app/page";
-import { navLinks } from "@/lib/data";
+import { navLinks, resumePath } from "@/lib/data";
 
 type NavbarProps = {
   activeSection: ActiveSection;
@@ -175,7 +175,7 @@ export default function Navbar({
           </div>
 
           <a
-            href="/portfolio/Lokesh_Agarwal_Resume.pdf"
+            href={resumePath}
             download
             className="theme-icon-button inline-flex h-11 w-11 items-center justify-center rounded-lg border transition sm:w-auto sm:px-4"
             title="Download Resume"
@@ -190,7 +190,7 @@ export default function Navbar({
 
         <div className="flex items-center gap-3 lg:hidden">
           <a
-            href="/portfolio/Lokesh_Agarwal_Resume.pdf"
+            href={resumePath}
             download
             className="theme-icon-button inline-flex h-11 w-11 items-center justify-center rounded-lg border transition sm:w-auto sm:px-4"
             title="Download Resume"
