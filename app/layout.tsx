@@ -1,21 +1,49 @@
 import type { Metadata } from "next";
 
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import ScrollBarHandler from "@/components/ScrollBarHandler";
 import "./globals.css";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const nodeEnvironment = process.env.NEXT_PUBLIC_NODE_ENVIRONMENT;
 const isProduction = nodeEnvironment === "production";
 const basePath = isProduction ? "/Portfolio" : "";
 
+const withBasePath = (path: string) => `${basePath}${path}`;
+
+const siteUrl = "https://lokesh041999.github.io/Portfolio/";
+
 export const metadata: Metadata = {
   title: "Lokesh Agarwal",
   description:
     "Portfolio of Lokesh Agarwal, Software Engineer II specializing in React.js, Next.js, Node.js, Mapbox GL JS, dashboards, and geospatial applications.",
+  metadataBase: new URL(siteUrl),
   icons: {
-    icon: `${basePath}/icons/variant6-blue.svg`,
-    shortcut: `${basePath}/icons/variant6-blue.svg`,
-    apple: `${basePath}/icons/variant6-blue-180.png`,
+    icon: withBasePath("/icons/variant6-blue.svg"),
+    shortcut: withBasePath("/icons/variant6-blue.svg"),
+    apple: withBasePath("/icons/variant6-blue-180.png"),
+  },
+  openGraph: {
+    title: "Lokesh Agarwal",
+    description:
+      "Portfolio of Lokesh Agarwal, Software Engineer II specializing in React.js, Next.js, Node.js, Mapbox GL JS, dashboards, and geospatial applications.",
+    url: siteUrl,
+    siteName: "Lokesh Agarwal",
+    type: "website",
+    images: [
+      {
+        url: `${siteUrl}icons/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "Lokesh Agarwal Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lokesh Agarwal",
+    description:
+      "Portfolio of Lokesh Agarwal, Software Engineer II specializing in React.js, Next.js, Node.js, Mapbox GL JS, dashboards, and geospatial applications.",
+    images: [`${siteUrl}og-image.png`],
   },
 };
 
