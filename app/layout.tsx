@@ -11,6 +11,7 @@ const basePath = isProduction ? "/Portfolio" : "";
 const withBasePath = (path: string) => `${basePath}${path}`;
 
 const siteUrl = "https://lokesh041999.github.io/Portfolio/";
+const ogImageUrl = `${siteUrl}icons/og-image.png`;
 
 export const metadata: Metadata = {
   title: "Lokesh Agarwal",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${siteUrl}icons/og-image.png`,
+        url: ogImageUrl,
         width: 1200,
         height: 630,
         alt: "Lokesh Agarwal Portfolio",
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     title: "Lokesh Agarwal",
     description:
       "Portfolio of Lokesh Agarwal, Software Engineer II specializing in React.js, Next.js, Node.js, Mapbox GL JS, dashboards, and geospatial applications.",
-    images: [`${siteUrl}og-image.png`],
+    images: [ogImageUrl],
   },
 };
 
