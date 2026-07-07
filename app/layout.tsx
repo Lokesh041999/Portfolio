@@ -13,7 +13,7 @@ const withBasePath = (path: string) => `${basePath}${path}`;
 
 const siteUrl = "https://lokesh041999.github.io";
 const portfolioUrl = `${siteUrl}/Portfolio`;
-const ogImage = `${portfolioUrl}/icons/og-image.jpg`;
+const ogImage = `${portfolioUrl}/icons/og-image.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -31,6 +31,7 @@ export const metadata: Metadata = {
   keywords: [
     "Lokesh Agarwal",
     "Software Engineer",
+    "Software Engineer II",
     "Frontend Developer",
     "React.js",
     "Next.js",
@@ -38,6 +39,8 @@ export const metadata: Metadata = {
     "TypeScript",
     "JavaScript",
     "Mapbox GL JS",
+    "Geospatial Tools",
+    "API Integrations",
     "Portfolio",
   ],
 
@@ -66,7 +69,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: portfolioUrl,
-    siteName: "Lokesh Agarwal",
+    siteName: "Lokesh Agarwal Portfolio",
 
     title: "Lokesh Agarwal",
 
