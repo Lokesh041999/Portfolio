@@ -13,7 +13,7 @@ const withBasePath = (path: string) => `${basePath}${path}`;
 
 const siteUrl = "https://lokesh041999.github.io";
 const portfolioUrl = `${siteUrl}/Portfolio`;
-const ogImage = `${portfolioUrl}/icons/og-image.png`;
+const ogImage = `${portfolioUrl}/icons/og-image.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
